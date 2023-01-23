@@ -17,8 +17,6 @@ body{
 }
 
 .grid-item{
-    width: 25px;
-    height: 25px;
     background-color: rgb(247, 247, 247);
 }
 
