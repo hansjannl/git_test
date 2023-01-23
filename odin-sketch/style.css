@@ -1,0 +1,31 @@
+body{
+    background-color: grey;
+   width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#canvas{
+    background-color: white;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.grid-item{
+    width: 25px;
+    height: 25px;
+    background-color: rgb(247, 247, 247);
+}
+
+.active{
+    background-color: black;
+}
+
+.not-active{
+    background-color: red;
+}

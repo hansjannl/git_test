@@ -44,6 +44,32 @@ function lastLetter(input){
     console.log(input.slice(-1));
 }
 
-const promptName = prompt("your name!");
+//const promptName = prompt("your name!");
 
-lastLetter(promptName);
+//lastLetter(promptName);
+
+// for (let i = 0; i<=10; i++){
+//     if(i%2 === 0){
+//         console.log(i);
+//     }
+// }
+
+//  let i = 0;
+//  while(i < 3){
+//     console.log(i);
+//     i++;
+//  };
+
+// let num;
+
+// do {
+//     num = prompt("enter a number greater than 100?", 0);
+// } while (num <= 100 && num);
+
+let n = 10;
+
+for(let i = 2; i <= n; i++){
+    if(n%i != 0){
+        console.log(i);
+    }
+}
