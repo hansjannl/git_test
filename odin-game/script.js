@@ -1,3 +1,20 @@
+let computerOutput = document.getElementById("computer");
+let outcome = document.getElementById("outcome");
+let score = document.getElementById("score");
+let buttonReset = document.getElementById("reset");
+let buttonRock = document.getElementById("rock");
+let buttonPaper = document.getElementById("paper");
+let buttonScissors = document.getElementById("scissors");
+
+
+buttonRock.addEventListener("click", function() {playGame("rock")});
+buttonPaper.addEventListener("click", function() {playGame("paper")});
+buttonScissors.addEventListener("click", function() {playGame("scissors")});
+buttonScissors.addEventListener("click", function() {playGame("scissors")});
+buttonReset.addEventListener("click", function() {resetGame()});
+
+
+
 function getComputerChoice(){
    return(Math.floor(Math.random()*3));
 }
@@ -18,41 +35,46 @@ function convertNumber(number){
 
 function getWinner(playerChoice){
     let computerChoice = convertNumber(getComputerChoice());
+    computerOutput.innerText = computerChoice;
     if(computerChoice === playerChoice){
-        return "draw";
+        return "It's a draw!";
     }else if(computerChoice === "rock" && playerChoice === "scissors"){
-        return "Computer";
+        return "Computer Wins!";
     }else if(computerChoice === "paper" && playerChoice === "rock"){
-        return "Computer";
+        return "Computer Wins!";
     }else if(computerChoice === "scissors" && playerChoice === "paper"){
-        return "Computer";
+        return "Computer Wins!";
     }else{
-        return "Player"
+        return "You win!"
     }
 }
 
-function playGame(){
-    playerChoice = prompt("your choice");
-    let winner = getWinner(playerChoice)
-    console.log("winner: "+ winner);
-    if(winner === "Computer"){
+function playGame(input){
+    if(game < 5){
+        buttonReset.removeAttribute("hidden");
+    let winner = getWinner(input)
+    outcome.innerText = winner;
+    if(winner === "Computer Wins!"){
         computerWins++;
         game++;
-    }else if(winner === "Player"){
+    }else if(winner === "You win!"){
         playerWins++
         game++;
     }else{
         game++
     }
+    score.innerText = `Computer wins: ${computerWins}. Games you won: ${playerWins}, total amount of games played: ${game}.`
+    }
 }
 
+function resetGame(){
+    game = 0;
+    computerWins = 0
+    playerWins = 0;
+    score.innerText = "";
+    reset.setAttribute = "hidden"; 
+}
 
 let game = 0;
 let computerWins = 0;
 let playerWins = 0;
-
-for (let i = 0; i < 5; i++) {
-    playGame();
-    console.log(`total games played: ${game}, computer wins: ${computerWins}, player wins: ${playerWins}`)
-    getComputerChoice()
-}
