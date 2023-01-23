@@ -41,5 +41,5 @@ function resetColor(i) {
     itemToChange = itemToChange.classList.remove("active");
 }
 
-
+//run it once
 createGrid();
