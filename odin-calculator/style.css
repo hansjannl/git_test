@@ -1,0 +1,47 @@
+body{
+    background-color: grey;
+   width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container{
+    background-color: white;
+    height: 650px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.screen{
+    font-size: 44px;
+    flex: 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-bottom: 25px;
+}
+
+.input{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.button{
+    width: 65px;
+    height: 65px;
+    border: 1px solid black;
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.double{
+    flex: 2;
+}
